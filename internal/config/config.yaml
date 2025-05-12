@@ -1,0 +1,14 @@
+telegram:
+  token_env: TELEGRAM_BOT_TOKEN
+  debug: true
+auth:
+  secret_code: "your_secret_code"
+  admin_code: "your_admin_code"
+storage:
+  users_file: "authorized_users.json"
+  admins_file: "authorized_admins.json"
+  nicknames_file: "nicknames.json"
+  posts_file: "posts.json"
+limits:
+  max_caption_length: 1024
+  max_media_count: 10

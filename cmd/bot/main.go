@@ -17,14 +17,13 @@ import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"log"
 	"os"
-	"time"
 )
 
 const (
 	AuthorizedUsersFile  = "authorized_users.json"
 	AuthorizedAdminsFile = "authorized_admins.json"
 	NicknamesFile        = "nicknames.json"
-	PostsFile            = "posts.json"
+	PostsFile            = ""
 	SecretCode           = "your_secret_code"
 	AdminCode            = "your_admin_code"
 	MaxCaptionLength     = 1024 // Максимальная длина подписи в Telegram
@@ -38,12 +37,11 @@ type UserNickname struct {
 
 // Post хранит информацию о посте
 type Post struct {
-	ID          string    `json:"id"`
-	AdminChatID int64     `json:"admin_chat_id"`
-	Text        string    `json:"text"`
-	PhotoIDs    []string  `json:"photo_ids"`
-	PublishTime time.Time `json:"publish_time"`
-	Published   bool      `json:"published"`
+	ID          string   `json:"id"`
+	AdminChatID int64    `json:"admin_chat_id"`
+	Text        string   `json:"text"`
+	PhotoIDs    []string `json:"photo_ids"`
+	Published   bool     `json:"published"`
 }
 
 // CreatingPost хранит временное состояние создаваемого поста
